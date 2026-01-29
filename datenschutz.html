@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Datenschutzhinweise – Christian Seinwill</title>
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --logo-beige: #d9c5a3;
+      --text: #ffffff;
+      --muted: rgba(217, 197, 163, 0.6);
+      --accent: #d9c5a3;
+      --accent-hover: #e6d5b8;
+      --accent-text: #1a1a1a;
+      --input-bg: rgba(217, 197, 163, 0.05);
+      --stroke: rgba(217, 197, 163, 0.15);
+      --font: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; background-color: var(--bg); }
+    
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(680px, 92%);
+      padding: 40px 0 80px 0;
+      margin: auto; 
+    }
+
+    /* Logo Styling reuse */
+    .logo-container {
+      margin: 0 auto 40px auto;
+      width: 100px; 
+      height: 100px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: var(--text);
+      border-bottom: 1px solid var(--stroke);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Specific Components */
+    .summary-box {
+      background: var(--input-bg);
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    .summary-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .summary-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .summary-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--stroke);
+      border-radius: 12px;
+      margin-bottom: 24px;
+      background: rgba(0,0,0,0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px; /* Ensure tables don't squash too much on mobile */
+      font-size: 14px;
+    }
+
+    th {
+      text-align: left;
+      background: rgba(217, 197, 163, 0.1);
+      color: var(--accent);
+      padding: 12px 16px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--stroke);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--stroke);
+      vertical-align: top;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .contact-card {
+      background: var(--input-bg);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: 1px solid var(--stroke);
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: white; color: black; }
+      .container { width: 100%; padding: 0; }
+      a { text-decoration: none; color: black; }
+      .summary-box, .contact-card { border: 1px solid #ccc; background: none; color: black; }
+      h1, h2, h3 { color: black; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="#" class="back-btn" onclick="history.back()">← Zurück</a>
+
+    <div class="logo-container">
+      <img src="logo.png" alt="sein.will. Logo" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='block';">
+      <div id="logo-placeholder" style="display:none; color:var(--logo-beige); border:2px solid var(--logo-beige); border-radius:50%; width:80px; height:80px; line-height:80px; text-align:center; font-weight:bold; font-size: 14px;">Logo</div>
+    </div>
+
+    <h1>Datenschutzhinweise (Art. 13 DSGVO)</h1>
+
+    <div class="summary-box">
+      <div class="summary-title">Kurzinfo (Zusammenfassung)</div>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="summary-label">Wer ich bin (Verantwortlicher)</span>
+          <span>Christian Seinwill</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Zwecke</span>
+          <span>Kontaktaufnahme, Vorqualifizierung, Terminvereinbarung, Matching zu Vakanzen/Projekten.</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Rechtsgrundlage</span>
+          <span>Vorvertragliche Maßnahmen oder berechtigtes Interesse (Recruiting); Einwilligung (Talentpool/Aufzeichnung).</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Speicherdauer</span>
+          <span>6 Monate nach Prozessende (Recruiting), 24 Monate (Talentpool, mit Deiner Einwilligung).</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Deine Rechte</span>
+          <span>Du hast umfassende Rechte, z. B. auf Auskunft, Berichtigung und Löschung Deiner Daten.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>1. Name und Kontaktdaten des Verantwortlichen</h2>
+    <p>Ich bin der Verantwortliche im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze:</p>
+    
+    <div class="contact-card">
+      <strong>Christian Seinwill</strong><br>
+      Andreas-Knack-Ring 20a<br>
+      22307 Hamburg<br><br>
+      E-Mail: <a href="mailto:recruit@chris-gan.com">recruit@chris-gan.com</a><br>
+      Telefon: <a href="tel:+4915141270068">+49 151 41270068</a>
+    </div>
+
+    <h2>2. Datenschutzbeauftragter</h2>
+    <p>Ich habe derzeit keinen Datenschutzbeauftragten bestellt, da die gesetzlichen Voraussetzungen hierfür voraussichtlich nicht erfüllt sind (Art. 37 Abs. 1 DSGVO i.V.m. § 38 Abs. 1 BDSG).</p>
+
+    <h2>3. Zwecke und Rechtsgrundlagen der Datenverarbeitung</h2>
+    <p>Ich verarbeite Deine personenbezogenen Daten für die folgenden Zwecke.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%;">Zweck der Verarbeitung</th>
+            <th style="width: 30%;">Rechtsgrundlage</th>
+            <th style="width: 40%;">Erläuterung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kontaktaufnahme, Vorqualifizierung, Terminvereinbarung und Durchführung von Recruiting-Gesprächen</td>
+            <td>Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) <br>ODER <br>Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse)</td>
+            <td>Die Verarbeitung ist notwendig, um Deine Anfrage/Bewerbung zu bearbeiten, Dich zu kontaktieren und Deine Eignung für Vakanzen/Projekte zu prüfen. Art. 6 Abs. 1 lit. b greift, wenn wir unmittelbar vor Abschluss eines Vertrages stehen. Ansonsten stütze ich mich auf mein berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO), den Recruiting-Prozess effizient zu gestalten.</td>
+          </tr>
+          <tr>
+            <td>Matching zu Vakanzen/Projekten (nach Gespräch)</td>
+            <td>Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen)</td>
+            <td>Ich nutze Deine Daten, um Dich aktiv bei der Suche nach einer passenden Stelle oder einem Projekt zu unterstützen und Dich an potenzielle Auftraggeber/Arbeitgeber zu vermitteln.</td>
+          </tr>
+          <tr>
+            <td>Aufnahme in den Talentpool</td>
+            <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+            <td>Die Speicherung über den aktuellen Prozess hinaus zur Berücksichtigung bei zukünftigen Vakanzen/Projekten erfolgt nur mit Deiner gesonderten, freiwilligen Einwilligung.</td>
+          </tr>
+          <tr>
+            <td>Aufzeichnung/Transkription/Summary des Gesprächs</td>
+            <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+            <td>Dies erfolgt nur mit Deiner gesonderten, aktiven Einwilligung vor Beginn des Gesprächs, um die Gesprächsinhalte effizient nachzuverfolgen und zusammenzufassen.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size: 14px; color: var(--muted); border: 1px dashed var(--stroke); padding: 12px; border-radius: 8px;">
+      <strong>Hinweis zu Art. 9 DSGVO:</strong> Ich beabsichtige nicht, besondere Kategorien personenbezogener Daten (wie Gesundheitsdaten, ethnische Herkunft etc.) zu verarbeiten. Bitte sieh davon ab, mir solche Informationen mitzuteilen, es sei denn, dies ist ausnahmsweise gesetzlich vorgeschrieben (z.B. Schwerbehindertenstatus auf freiwilliger Basis).
+    </p>
+
+    <h2>4. Kategorien personenbezogener Daten</h2>
+    <p>Ich verarbeite die folgenden Kategorien Deiner Daten, die Du mir über den Funnel zur Verfügung stellst (Funnel-Daten):</p>
+    <ul>
+      <li><strong>Persönliche Identifikationsdaten:</strong> Voller Name</li>
+      <li><strong>Kontaktdaten:</strong> E-Mail-Adresse, Telefonnummer</li>
+      <li><strong>Berufliche Informationen:</strong> LinkedIn-URL, Antworten auf Qualifikationsfragen</li>
+      <li><strong>Zusätzlich entstehen:</strong> Gesprächsnotizen</li>
+    </ul>
+
+    <h2>5. Empfänger der personenbezogenen Daten</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 25%;">Empfänger-Kategorie</th>
+            <th style="width: 25%;">Betroffene Daten</th>
+            <th style="width: 50%;">Hinweis zur Weitergabe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Interne Mitarbeiter</td>
+            <td>Alle genannten Daten</td>
+            <td>Nur Zugriff durch berechtigte Mitarbeiter für den Recruiting-Prozess.</td>
+          </tr>
+          <tr>
+            <td>IT-Dienstleister (Auftragsverarbeiter)</td>
+            <td>Funnel-Daten, Kalenderdaten, Gesprächsdaten</td>
+            <td>Hosting/Funnel: Netlify; Terminbuchung: meetergo; Ablage/CRM: Spreadsheet (z. B. Google Sheets) ODER Copper; Meetings/Gesprächsnotizen: Google Meet, Fireflies.</td>
+          </tr>
+          <tr>
+            <td>Potenzielle Auftraggeber/Arbeitgeber</td>
+            <td>Ausgewählte Profil-/Gesprächsdaten</td>
+            <td>Eine Weitergabe Deiner Daten erfolgt NUR nach einem persönlichen Gespräch und nur mit Deiner vorherigen, gesonderten und ausdrücklichen Zustimmung. Dies geschieht nicht im ersten Schritt des Funnels.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Hinweis zur Auftragsverarbeitung (Art. 28 DSGVO):</strong> Ich habe mit allen Dienstleistern, die in meinem Auftrag personenbezogene Daten verarbeiten (z.B. Hosting-Anbieter, Meeting-Tools), entsprechende Auftragsverarbeitungsverträge (AVV) abgeschlossen, um den Schutz Deiner Daten zu gewährleisten.</p>
+
+    <h2>6. Drittlandübermittlung</h2>
+    <p>Ich setze Dienstleister ein, deren Server oder Unternehmensstandorte sich außerhalb der Europäischen Union (sog. Drittländer) befinden können, insbesondere in den USA (z.B. Google Meet, Fireflies, Netlify, Copper).</p>
+    <p>Bei der Übermittlung in ein Drittland stelle ich sicher, dass ein angemessenes Datenschutzniveau gewährleistet ist. Dies geschieht in der Regel durch:</p>
+    <ul>
+      <li><strong>EU-US Data Privacy Framework (EU-US DPF):</strong> Soweit der US-Anbieter unter dem EU-US DPF zertifiziert ist.</li>
+      <li><strong>Standardvertragsklauseln der EU-Kommission (SCC):</strong> In Verbindung mit zusätzlichen technischen und organisatorischen Maßnahmen.</li>
+    </ul>
+
+    <h2>7. Speicherdauer der personenbezogenen Daten</h2>
+    <p>Ich speichere Deine Daten nur so lange, wie es für die Erreichung des Zwecks erforderlich ist:</p>
+    <ul>
+      <li><strong>Recruiting-Prozess:</strong> Deine Daten werden maximal 6 Monate nach Abschluss des Recruiting-Prozesses (z.B. Absage oder erfolgreiche Vermittlung) gelöscht.</li>
+      <li><strong>Talentpool (mit Einwilligung):</strong> Bei Deiner Einwilligung speichere ich Deine Daten für 24 Monate. Nach Ablauf dieser Frist werden sie gelöscht oder ich hole eine erneute Einwilligung von Dir ein.</li>
+      <li><strong>Gesprächsaufzeichnungen/Transkripte (mit Einwilligung):</strong> Aufzeichnungen, Transkriptionen und Summaries lösche ich nach Erstellung der Zusammenfassung, spätestens jedoch 6 Monate nach Beendigung des Prozesses, sofern kein rechtlicher Grund für eine längere Speicherung besteht.</li>
+    </ul>
+
+    <h2>8. Deine Rechte als betroffene Person</h2>
+    <p>Dir stehen mir gegenüber die folgenden Rechte zu:</p>
+    <ul>
+      <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Du kannst Auskunft über die von mir verarbeiteten personenbezogenen Daten verlangen.</li>
+      <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Du kannst die unverzügliche Berichtigung unrichtiger oder Vervollständigung Deiner bei mir gespeicherten Daten verlangen.</li>
+      <li><strong>Recht auf Löschung (Art. 17 DSGVO):</strong> Du kannst die Löschung Deiner Daten verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung, zur Erfüllung einer rechtlichen Verpflichtung oder zur Geltendmachung von Rechtsansprüchen erforderlich ist.</li>
+      <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Du kannst die Einschränkung der Verarbeitung verlangen, wenn Du die Richtigkeit der Daten bestreitest, die Verarbeitung unrechtmäßig ist, ich die Daten nicht mehr benötige, Du diese aber zur Geltendmachung von Rechtsansprüchen benötigst, oder Du Widerspruch gegen die Verarbeitung eingelegt hast.</li>
+      <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Du hast das Recht, Deine mir bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen.</li>
+      <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Du hast das Recht, aus Gründen, die sich aus Deiner besonderen Situation ergeben, jederzeit gegen die Verarbeitung Deiner personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) erfolgt, Widerspruch einzulegen.</li>
+      <li><strong>Widerrufsrecht (Art. 7 Abs. 3 DSGVO):</strong> Du hast das Recht, eine einmal erteilte Einwilligung (z. B. für den Talentpool oder die Gesprächsaufzeichnung) jederzeit mir gegenüber zu widerrufen. Die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung wird durch den Widerruf nicht berührt.</li>
+    </ul>
+
+    <h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+    <p>Unbeschadet eines anderweitigen Rechtsbehelfs steht Dir das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Du der Ansicht bist, dass die Verarbeitung der Dich betreffenden personenbezogenen Daten gegen die DSGVO verstößt.</p>
+    <p>Die für mich zuständige Aufsichtsbehörde ist:</p>
+    <div class="contact-card">
+      Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit<br>
+      Ludwig-Erhard-Str 22, 7. OG<br>
+      20459 Hamburg
+    </div>
+
+    <h2>10. Pflicht zur Bereitstellung der Daten</h2>
+    <p>Die Bereitstellung Deiner Funnel-Daten (Name, E-Mail, Telefon, LinkedIn-URL, Antworten auf Qualifikationsfragen) ist für die Durchführung des Recruiting-Prozesses und die Kontaktaufnahme zwingend erforderlich. Ohne diese Daten kann ich Dich nicht in meinen Prozess aufnehmen und nicht prüfen, ob ein Matching mit Vakanzen/Projekten möglich ist.</p>
+
+    <h2>11. Sicherheit der Verarbeitung</h2>
+    <p>Ich verwende geeignete technische und organisatorische Sicherheitsmaßnahmen, um Deine Daten gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen. Dazu gehören insbesondere die Verschlüsselung der Datenübertragung (z.B. SSL/TLS) und Zugriffsbeschränkungen auf meine Systeme.</p>
+
+    <h2>12. Keine automatisierte Entscheidungsfindung</h2>
+    <p>Ich verwende keine Verfahren zur automatisierten Entscheidungsfindung oder zum Profiling gemäß Art. 22 DSGVO. Eine Entscheidungsfindung über Deine Eignung erfolgt stets durch menschliches Personal.</p>
+
+    <div style="margin-top: 80px; text-align: center; color: var(--muted); font-size: 12px;">
+      &copy; Christian Seinwill | <a href="#" onclick="history.back()">Zurück zur Startseite</a>
+    </div>
+
+  </div>
+</body>
+</html>
